@@ -1,0 +1,230 @@
+@import "mixin";
+@import "variables";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    .container{
+        width: 90%;
+        
+        header{
+            .icons{
+                width: 20px;
+            }
+            .row{
+                margin-top: 1rem;
+                @include mobile{
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0;
+                    padding: 0;
+                }
+                .left-col{}
+                .right-col{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+                .list{
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                
+
+                }
+            }
+            .text{
+                margin-top: 3rem;
+            }
+            .img-list{
+                margin-top: 2rem;
+                
+                
+               .header-img{
+                  width: 1000px;
+                  @include mobile{
+                      width: 0px;
+                  }
+                  
+                 
+                   img{
+                       min-width: 1100px;
+                       @include mobile {
+                           min-width: 0px;
+                           max-width: 310px;
+                       }
+                   }
+               }
+               .product-list{
+                   text-align: center;
+                   padding: 20px;
+                   @include mobile {
+                       padding-left:0px;
+                       font-size: 10px;
+
+                   }
+                   ul{
+                       display: flex;
+                       flex-direction: row;
+                       justify-content: space-around;
+                   }
+               }
+
+            }
+
+        }
+        main{
+            .container1{
+                
+                .our-sperior{
+                   
+                    .row{
+                       
+                        .left{
+                            img{
+                                max-height: 150px;
+                                @include mobile{
+                                    max-height: 80px;
+                                }
+                            }
+                        }
+                        .center{
+                            display: flex;
+                            align-items: center;
+                            b{
+                                font-size: 2rem;
+                                @include mobile{
+                                    font-size:10px;
+                                }
+                            }
+                        }
+                        .right{
+                         display: flex;
+                         flex-direction: row;
+                         align-items: center;
+                         .left-arrow{
+                             img{
+                                 width:30px;
+                                 @include mobile{
+                                     width: 20px;
+                                 }
+                             }
+                         }
+                         .right-arrow{
+
+                            margin-left: 1rem;
+                            img{
+                                width:40px;
+
+                                @include mobile{
+                                    width: 30px;
+                                }
+                            }
+                         }
+
+                        }
+                    }
+                }
+                .six-photo{
+                    display: flex;
+                    flex-direction: column;
+                    .row{
+                        display: flex;
+                        justify-content: space-around;
+                        @include mobile{
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            margin: 0;
+                            padding: 0;
+                        }
+                       
+                       .six-img{
+                           width: 300px;
+                           height: 300px;
+                       }
+                       .left-img, .center-img, .right-img{
+                           text-align: center;
+                       }
+                       
+                       
+                    }
+                    .down-row{
+                        margin-top: 2rem;
+                    }
+                }
+                .one-img{
+                    margin-top: 3rem;
+                  img{
+                      min-width: 1100px;
+                      @include mobile{
+                          min-width: 0px;
+                          max-width: 310px;
+                      }
+                  }  
+                }
+
+            }
+        }
+        footer{
+            .container2{
+                .up-text{
+                    margin-left: 2rem;
+                    margin-top: 3rem;
+                }
+                .down-text{
+                   
+                    margin-left: 2rem;
+                    margin-top: 3rem;
+                    background-color:#DCDCDC;
+                    @include mobile{
+                        margin-left:0rem;
+                    }
+                    
+
+                    
+                    .opt{
+                        text-align: center;
+                        padding-top: 2rem;
+                        h3{
+                            padding-top: 1rem;
+                        }
+                    }
+                    .button{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top:2rem;
+                        padding-bottom: 4rem;
+
+                        .input{
+                            margin-top: 8px;
+                            input{
+                                padding-right: 9rem;
+                                @include mobile {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+                        .btn{
+                            button{
+                                background-color: black;
+                                color:white;
+                                padding: 0px 20px;
+                                @include mobile{
+                                    padding: 0px 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
